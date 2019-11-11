@@ -9199,3 +9199,655 @@ Processing by RepositoriesController#index as HTML
 Completed 200 OK in 188ms (Views: 181.3ms | ActiveRecord: 4.8ms)
 
 
+Started GET "/" for 172.18.0.1 at 2019-11-11 04:28:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RepositoriesController#index as HTML
+  Rendering repositories/index.html.erb within layouts/application
+  [1m[36mRepository Load (0.6ms)[0m  [1m[34mSELECT "repositories".* FROM "repositories"[0m
+  ↳ app/views/repositories/index.html.erb:18
+  Rendered repositories/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 210ms (Views: 191.3ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/repositories/update_trending" for 172.18.0.1 at 2019-11-11 04:28:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RepositoriesController#update_trending as HTML
+  Parameters: {"authenticity_token"=>"X/F/IevYoxhPWTfLk3q8eypDGqlsNN0hWazY++HsELTtWvp7xdxqJ3PX9bidryaGyy8snDHBqF9pYZWhkuMNqg=="}
+  [1m[36mRepository Destroy (43.8ms)[0m  [1m[31mDELETE FROM "repositories"[0m
+  ↳ app/models/repository.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.4ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 8514], ["name", "rails"], ["owner_name", "rails"], ["created_at", "2019-11-11 04:28:30.683746"], ["updated_at", "2019-11-11 04:28:30.683746"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (191.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.6ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 65252], ["name", "jekyll"], ["owner_name", "jekyll"], ["created_at", "2019-11-11 04:28:30.881511"], ["updated_at", "2019-11-11 04:28:30.881511"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 7569578], ["name", "discourse"], ["owner_name", "discourse"], ["created_at", "2019-11-11 04:28:30.926286"], ["updated_at", "2019-11-11 04:28:30.926286"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 27442967], ["name", "fastlane"], ["owner_name", "fastlane"], ["created_at", "2019-11-11 04:28:30.937575"], ["updated_at", "2019-11-11 04:28:30.937575"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.7ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 21600440], ["name", "awesome-awesomeness"], ["owner_name", "bayandin"], ["created_at", "2019-11-11 04:28:30.947309"], ["updated_at", "2019-11-11 04:28:30.947309"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.7ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 8681349], ["name", "huginn"], ["owner_name", "huginn"], ["created_at", "2019-11-11 04:28:30.958730"], ["updated_at", "2019-11-11 04:28:30.958730"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (2.3ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 2500088], ["name", "gitlabhq"], ["owner_name", "gitlabhq"], ["created_at", "2019-11-11 04:28:30.971239"], ["updated_at", "2019-11-11 04:28:30.971239"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 13840241], ["name", "devdocs"], ["owner_name", "freeCodeCamp"], ["created_at", "2019-11-11 04:28:30.982280"], ["updated_at", "2019-11-11 04:28:30.982280"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 308770], ["name", "devise"], ["owner_name", "plataformatec"], ["created_at", "2019-11-11 04:28:30.993064"], ["updated_at", "2019-11-11 04:28:30.993064"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 53238813], ["name", "brew"], ["owner_name", "Homebrew"], ["created_at", "2019-11-11 04:28:31.005017"], ["updated_at", "2019-11-11 04:28:31.005017"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1863329], ["name", "laravel"], ["owner_name", "laravel"], ["created_at", "2019-11-11 04:28:32.233447"], ["updated_at", "2019-11-11 04:28:32.233447"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (33.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.1ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1129010], ["name", "jQuery-File-Upload"], ["owner_name", "blueimp"], ["created_at", "2019-11-11 04:28:32.272145"], ["updated_at", "2019-11-11 04:28:32.272145"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 2579314], ["name", "Faker"], ["owner_name", "fzaninotto"], ["created_at", "2019-11-11 04:28:32.283415"], ["updated_at", "2019-11-11 04:28:32.283415"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 458058], ["name", "symfony"], ["owner_name", "symfony"], ["created_at", "2019-11-11 04:28:32.294467"], ["updated_at", "2019-11-11 04:28:32.294467"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.1ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1864363], ["name", "composer"], ["owner_name", "composer"], ["created_at", "2019-11-11 04:28:32.305445"], ["updated_at", "2019-11-11 04:28:32.305445"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 3482588], ["name", "SecLists"], ["owner_name", "danielmiessler"], ["created_at", "2019-11-11 04:28:32.316396"], ["updated_at", "2019-11-11 04:28:32.316396"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 7548986], ["name", "framework"], ["owner_name", "laravel"], ["created_at", "2019-11-11 04:28:32.327605"], ["updated_at", "2019-11-11 04:28:32.327605"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 2246815], ["name", "DesignPatternsPHP"], ["owner_name", "domnikl"], ["created_at", "2019-11-11 04:28:32.338821"], ["updated_at", "2019-11-11 04:28:32.338821"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1420053], ["name", "guzzle"], ["owner_name", "guzzle"], ["created_at", "2019-11-11 04:28:32.349770"], ["updated_at", "2019-11-11 04:28:32.349770"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 2234102], ["name", "CodeIgniter"], ["owner_name", "bcit-ci"], ["created_at", "2019-11-11 04:28:32.361094"], ["updated_at", "2019-11-11 04:28:32.361094"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 83222441], ["name", "system-design-primer"], ["owner_name", "donnemartin"], ["created_at", "2019-11-11 04:28:33.740522"], ["updated_at", "2019-11-11 04:28:33.740522"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (315.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 21289110], ["name", "awesome-python"], ["owner_name", "vinta"], ["created_at", "2019-11-11 04:28:34.063262"], ["updated_at", "2019-11-11 04:28:34.063262"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 54346799], ["name", "public-apis"], ["owner_name", "public-apis"], ["created_at", "2019-11-11 04:28:34.074156"], ["updated_at", "2019-11-11 04:28:34.074156"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 51117837], ["name", "models"], ["owner_name", "tensorflow"], ["created_at", "2019-11-11 04:28:34.084822"], ["updated_at", "2019-11-11 04:28:34.084822"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1039520], ["name", "youtube-dl"], ["owner_name", "ytdl-org"], ["created_at", "2019-11-11 04:28:34.096419"], ["updated_at", "2019-11-11 04:28:34.096419"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 33614304], ["name", "thefuck"], ["owner_name", "nvbn"], ["created_at", "2019-11-11 04:28:34.107587"], ["updated_at", "2019-11-11 04:28:34.107587"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 596892], ["name", "flask"], ["owner_name", "pallets"], ["created_at", "2019-11-11 04:28:34.118733"], ["updated_at", "2019-11-11 04:28:34.118733"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 33015583], ["name", "keras"], ["owner_name", "keras-team"], ["created_at", "2019-11-11 04:28:34.129596"], ["updated_at", "2019-11-11 04:28:34.129596"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 4164482], ["name", "django"], ["owner_name", "django"], ["created_at", "2019-11-11 04:28:34.140721"], ["updated_at", "2019-11-11 04:28:34.140721"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 3544424], ["name", "httpie"], ["owner_name", "jakubroztocil"], ["created_at", "2019-11-11 04:28:34.152016"], ["updated_at", "2019-11-11 04:28:34.152016"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.1ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 18408635], ["name", "Apollo-11"], ["owner_name", "chrislgarry"], ["created_at", "2019-11-11 04:28:35.250098"], ["updated_at", "2019-11-11 04:28:35.250098"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.4ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 138634298], ["name", "MS-DOS"], ["owner_name", "microsoft"], ["created_at", "2019-11-11 04:28:35.285629"], ["updated_at", "2019-11-11 04:28:35.285629"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.4ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 18079664], ["name", "mal"], ["owner_name", "kanaka"], ["created_at", "2019-11-11 04:28:35.296401"], ["updated_at", "2019-11-11 04:28:35.296401"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 4047080], ["name", "Prince-of-Persia-Apple-II"], ["owner_name", "jmechner"], ["created_at", "2019-11-11 04:28:35.308403"], ["updated_at", "2019-11-11 04:28:35.308403"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 32939463], ["name", "pics"], ["owner_name", "corkami"], ["created_at", "2019-11-11 04:28:35.319435"], ["updated_at", "2019-11-11 04:28:35.319435"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.1ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 34096], ["name", "hello-world"], ["owner_name", "leachim6"], ["created_at", "2019-11-11 04:28:35.330937"], ["updated_at", "2019-11-11 04:28:35.330937"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1376101], ["name", "cjdns"], ["owner_name", "cjdelisle"], ["created_at", "2019-11-11 04:28:35.342117"], ["updated_at", "2019-11-11 04:28:35.342117"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 21994526], ["name", "unix-history-repo"], ["owner_name", "dspinellis"], ["created_at", "2019-11-11 04:28:35.352838"], ["updated_at", "2019-11-11 04:28:35.352838"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.1ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 174231735], ["name", "collapseos"], ["owner_name", "hsoft"], ["created_at", "2019-11-11 04:28:35.364239"], ["updated_at", "2019-11-11 04:28:35.364239"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 42005280], ["name", "x86-bare-metal-examples"], ["owner_name", "cirosantilli"], ["created_at", "2019-11-11 04:28:35.375333"], ["updated_at", "2019-11-11 04:28:35.375333"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 132464395], ["name", "JavaGuide"], ["owner_name", "Snailclimb"], ["created_at", "2019-11-11 04:28:36.654112"], ["updated_at", "2019-11-11 04:28:36.654112"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 22790488], ["name", "java-design-patterns"], ["owner_name", "iluwatar"], ["created_at", "2019-11-11 04:28:36.676649"], ["updated_at", "2019-11-11 04:28:36.676649"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 507775], ["name", "elasticsearch"], ["owner_name", "elastic"], ["created_at", "2019-11-11 04:28:36.687607"], ["updated_at", "2019-11-11 04:28:36.687607"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.1ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 6296790], ["name", "spring-boot"], ["owner_name", "spring-projects"], ["created_at", "2019-11-11 04:28:36.698873"], ["updated_at", "2019-11-11 04:28:36.698873"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 7508411], ["name", "RxJava"], ["owner_name", "ReactiveX"], ["created_at", "2019-11-11 04:28:36.709492"], ["updated_at", "2019-11-11 04:28:36.709492"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 892275], ["name", "retrofit"], ["owner_name", "square"], ["created_at", "2019-11-11 04:28:36.720988"], ["updated_at", "2019-11-11 04:28:36.720988"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1148753], ["name", "spring-framework"], ["owner_name", "spring-projects"], ["created_at", "2019-11-11 04:28:36.731917"], ["updated_at", "2019-11-11 04:28:36.731917"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 4710920], ["name", "dubbo"], ["owner_name", "apache"], ["created_at", "2019-11-11 04:28:36.743024"], ["updated_at", "2019-11-11 04:28:36.743024"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.5ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 19148949], ["name", "MPAndroidChart"], ["owner_name", "PhilJay"], ["created_at", "2019-11-11 04:28:36.754343"], ["updated_at", "2019-11-11 04:28:36.754343"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 11267509], ["name", "glide"], ["owner_name", "bumptech"], ["created_at", "2019-11-11 04:28:36.765631"], ["updated_at", "2019-11-11 04:28:36.765631"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 7600ms (ActiveRecord: 976.7ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-11-11 04:28:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RepositoriesController#index as HTML
+  Rendering repositories/index.html.erb within layouts/application
+  [1m[36mRepository Load (0.7ms)[0m  [1m[34mSELECT "repositories".* FROM "repositories"[0m
+  ↳ app/views/repositories/index.html.erb:18
+  Rendered repositories/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/repositories/update_trending" for 172.18.0.1 at 2019-11-11 04:29:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RepositoriesController#update_trending as HTML
+  Parameters: {"authenticity_token"=>"LxleH5NzqhmZsLUSOxEeKHtrBzpjOnGy9GB80rpIiwSdsttFvXdjJqU+d2E1xITVmgcxDz7PBMzErTGIyUeWGg=="}
+  [1m[36mRepository Destroy (48.5ms)[0m  [1m[31mDELETE FROM "repositories"[0m
+  ↳ app/models/repository.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 8514], ["name", "rails"], ["owner_name", "rails"], ["created_at", "2019-11-11 04:29:36.559571"], ["updated_at", "2019-11-11 04:29:36.559571"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (86.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 65252], ["name", "jekyll"], ["owner_name", "jekyll"], ["created_at", "2019-11-11 04:29:36.651289"], ["updated_at", "2019-11-11 04:29:36.651289"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 7569578], ["name", "discourse"], ["owner_name", "discourse"], ["created_at", "2019-11-11 04:29:36.662644"], ["updated_at", "2019-11-11 04:29:36.662644"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 27442967], ["name", "fastlane"], ["owner_name", "fastlane"], ["created_at", "2019-11-11 04:29:36.673995"], ["updated_at", "2019-11-11 04:29:36.673995"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 21600440], ["name", "awesome-awesomeness"], ["owner_name", "bayandin"], ["created_at", "2019-11-11 04:29:36.684437"], ["updated_at", "2019-11-11 04:29:36.684437"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 8681349], ["name", "huginn"], ["owner_name", "huginn"], ["created_at", "2019-11-11 04:29:36.695854"], ["updated_at", "2019-11-11 04:29:36.695854"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 2500088], ["name", "gitlabhq"], ["owner_name", "gitlabhq"], ["created_at", "2019-11-11 04:29:36.707042"], ["updated_at", "2019-11-11 04:29:36.707042"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.6ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 13840241], ["name", "devdocs"], ["owner_name", "freeCodeCamp"], ["created_at", "2019-11-11 04:29:36.717869"], ["updated_at", "2019-11-11 04:29:36.717869"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.5ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 308770], ["name", "devise"], ["owner_name", "plataformatec"], ["created_at", "2019-11-11 04:29:36.727756"], ["updated_at", "2019-11-11 04:29:36.727756"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.3ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 53238813], ["name", "brew"], ["owner_name", "Homebrew"], ["created_at", "2019-11-11 04:29:36.738499"], ["updated_at", "2019-11-11 04:29:36.738499"], ["language", "Ruby"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1863329], ["name", "laravel"], ["owner_name", "laravel"], ["created_at", "2019-11-11 04:29:38.064923"], ["updated_at", "2019-11-11 04:29:38.064923"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (34.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1129010], ["name", "jQuery-File-Upload"], ["owner_name", "blueimp"], ["created_at", "2019-11-11 04:29:38.104500"], ["updated_at", "2019-11-11 04:29:38.104500"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 2579314], ["name", "Faker"], ["owner_name", "fzaninotto"], ["created_at", "2019-11-11 04:29:38.115427"], ["updated_at", "2019-11-11 04:29:38.115427"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 458058], ["name", "symfony"], ["owner_name", "symfony"], ["created_at", "2019-11-11 04:29:38.126728"], ["updated_at", "2019-11-11 04:29:38.126728"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1864363], ["name", "composer"], ["owner_name", "composer"], ["created_at", "2019-11-11 04:29:38.137903"], ["updated_at", "2019-11-11 04:29:38.137903"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 3482588], ["name", "SecLists"], ["owner_name", "danielmiessler"], ["created_at", "2019-11-11 04:29:38.149207"], ["updated_at", "2019-11-11 04:29:38.149207"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 7548986], ["name", "framework"], ["owner_name", "laravel"], ["created_at", "2019-11-11 04:29:38.159786"], ["updated_at", "2019-11-11 04:29:38.159786"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 2246815], ["name", "DesignPatternsPHP"], ["owner_name", "domnikl"], ["created_at", "2019-11-11 04:29:38.170974"], ["updated_at", "2019-11-11 04:29:38.170974"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1420053], ["name", "guzzle"], ["owner_name", "guzzle"], ["created_at", "2019-11-11 04:29:38.181893"], ["updated_at", "2019-11-11 04:29:38.181893"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.7ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 2234102], ["name", "CodeIgniter"], ["owner_name", "bcit-ci"], ["created_at", "2019-11-11 04:29:38.192706"], ["updated_at", "2019-11-11 04:29:38.192706"], ["language", "PHP"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 83222441], ["name", "system-design-primer"], ["owner_name", "donnemartin"], ["created_at", "2019-11-11 04:29:39.370433"], ["updated_at", "2019-11-11 04:29:39.370433"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (47.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 21289110], ["name", "awesome-python"], ["owner_name", "vinta"], ["created_at", "2019-11-11 04:29:39.424734"], ["updated_at", "2019-11-11 04:29:39.424734"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 54346799], ["name", "public-apis"], ["owner_name", "public-apis"], ["created_at", "2019-11-11 04:29:39.435150"], ["updated_at", "2019-11-11 04:29:39.435150"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 51117837], ["name", "models"], ["owner_name", "tensorflow"], ["created_at", "2019-11-11 04:29:39.446658"], ["updated_at", "2019-11-11 04:29:39.446658"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1039520], ["name", "youtube-dl"], ["owner_name", "ytdl-org"], ["created_at", "2019-11-11 04:29:39.458064"], ["updated_at", "2019-11-11 04:29:39.458064"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 33614304], ["name", "thefuck"], ["owner_name", "nvbn"], ["created_at", "2019-11-11 04:29:39.469117"], ["updated_at", "2019-11-11 04:29:39.469117"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 596892], ["name", "flask"], ["owner_name", "pallets"], ["created_at", "2019-11-11 04:29:39.479892"], ["updated_at", "2019-11-11 04:29:39.479892"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 33015583], ["name", "keras"], ["owner_name", "keras-team"], ["created_at", "2019-11-11 04:29:39.491189"], ["updated_at", "2019-11-11 04:29:39.491189"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 4164482], ["name", "django"], ["owner_name", "django"], ["created_at", "2019-11-11 04:29:39.502252"], ["updated_at", "2019-11-11 04:29:39.502252"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 3544424], ["name", "httpie"], ["owner_name", "jakubroztocil"], ["created_at", "2019-11-11 04:29:39.513244"], ["updated_at", "2019-11-11 04:29:39.513244"], ["language", "Python"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 18408635], ["name", "Apollo-11"], ["owner_name", "chrislgarry"], ["created_at", "2019-11-11 04:29:40.466813"], ["updated_at", "2019-11-11 04:29:40.466813"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (72.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 138634298], ["name", "MS-DOS"], ["owner_name", "microsoft"], ["created_at", "2019-11-11 04:29:40.545132"], ["updated_at", "2019-11-11 04:29:40.545132"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 18079664], ["name", "mal"], ["owner_name", "kanaka"], ["created_at", "2019-11-11 04:29:40.556508"], ["updated_at", "2019-11-11 04:29:40.556508"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 4047080], ["name", "Prince-of-Persia-Apple-II"], ["owner_name", "jmechner"], ["created_at", "2019-11-11 04:29:40.567449"], ["updated_at", "2019-11-11 04:29:40.567449"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 32939463], ["name", "pics"], ["owner_name", "corkami"], ["created_at", "2019-11-11 04:29:40.578341"], ["updated_at", "2019-11-11 04:29:40.578341"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 34096], ["name", "hello-world"], ["owner_name", "leachim6"], ["created_at", "2019-11-11 04:29:40.589784"], ["updated_at", "2019-11-11 04:29:40.589784"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 1376101], ["name", "cjdns"], ["owner_name", "cjdelisle"], ["created_at", "2019-11-11 04:29:40.600437"], ["updated_at", "2019-11-11 04:29:40.600437"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.9ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 21994526], ["name", "unix-history-repo"], ["owner_name", "dspinellis"], ["created_at", "2019-11-11 04:29:40.611255"], ["updated_at", "2019-11-11 04:29:40.611255"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 174231735], ["name", "collapseos"], ["owner_name", "hsoft"], ["created_at", "2019-11-11 04:29:40.622449"], ["updated_at", "2019-11-11 04:29:40.622449"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.6ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 42005280], ["name", "x86-bare-metal-examples"], ["owner_name", "cirosantilli"], ["created_at", "2019-11-11 04:29:40.632465"], ["updated_at", "2019-11-11 04:29:40.632465"], ["language", "Assembly"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 121395510], ["name", "CS-Notes"], ["owner_name", "CyC2018"], ["created_at", "2019-11-11 04:29:41.775979"], ["updated_at", "2019-11-11 04:29:41.775979"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (349.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 132464395], ["name", "JavaGuide"], ["owner_name", "Snailclimb"], ["created_at", "2019-11-11 04:29:42.131767"], ["updated_at", "2019-11-11 04:29:42.131767"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 22790488], ["name", "java-design-patterns"], ["owner_name", "iluwatar"], ["created_at", "2019-11-11 04:29:42.142423"], ["updated_at", "2019-11-11 04:29:42.142423"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.1ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 507775], ["name", "elasticsearch"], ["owner_name", "elastic"], ["created_at", "2019-11-11 04:29:42.154242"], ["updated_at", "2019-11-11 04:29:42.154242"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 160640094], ["name", "LeetCodeAnimation"], ["owner_name", "MisterBooo"], ["created_at", "2019-11-11 04:29:42.164969"], ["updated_at", "2019-11-11 04:29:42.164969"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (0.8ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 6296790], ["name", "spring-boot"], ["owner_name", "spring-projects"], ["created_at", "2019-11-11 04:29:42.175872"], ["updated_at", "2019-11-11 04:29:42.175872"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 7508411], ["name", "RxJava"], ["owner_name", "ReactiveX"], ["created_at", "2019-11-11 04:29:42.187491"], ["updated_at", "2019-11-11 04:29:42.187491"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.1ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 81975372], ["name", "interviews"], ["owner_name", "kdn251"], ["created_at", "2019-11-11 04:29:42.198720"], ["updated_at", "2019-11-11 04:29:42.198720"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.2ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 5152285], ["name", "okhttp"], ["owner_name", "square"], ["created_at", "2019-11-11 04:29:42.209232"], ["updated_at", "2019-11-11 04:29:42.209232"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/repository.rb:17
+  [1m[36mRepository Create (1.0ms)[0m  [1m[32mINSERT INTO "repositories" ("external_id", "name", "owner_name", "created_at", "updated_at", "language") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["external_id", 20300177], ["name", "guava"], ["owner_name", "google"], ["created_at", "2019-11-11 04:29:42.220728"], ["updated_at", "2019-11-11 04:29:42.220728"], ["language", "Java"]]
+  ↳ app/models/repository.rb:17
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/repository.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 6985ms (ActiveRecord: 950.9ms)
+
+
+Started GET "/" for 172.18.0.1 at 2019-11-11 04:29:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RepositoriesController#index as HTML
+  Rendering repositories/index.html.erb within layouts/application
+  [1m[36mRepository Load (0.7ms)[0m  [1m[34mSELECT "repositories".* FROM "repositories"[0m
+  ↳ app/views/repositories/index.html.erb:18
+  Rendered repositories/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.7ms)
+
+
